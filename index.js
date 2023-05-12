@@ -1,8 +1,8 @@
 const LIMIT = 10000;
 const CURRENCY = "руб.";
-const STATUS_IN_LIMIT = "всё хорошо";
+const STATUS_IN_LIMIT = "пока гуляем";
 const STATUS_ON_LIMIT = "на грани";
-const STATUS_OUT_OF_LIMIT = "всё плохо";
+const STATUS_OUT_OF_LIMIT = "кошелёк пуст";
 const STATUS_ON_LIMIT_CLASSNAME = "status_orange";
 const STATUS_OUT_OF_LIMIT_CLASSNAME = "status_red";
 
@@ -12,6 +12,7 @@ const historyNode = document.getElementById("history");
 const sumNode = document.getElementById("total");
 const limitNode = document.getElementById("limit");
 const statusNode = document.getElementById("status");
+const resetNode = document.getElementById("resetExpensesBtn");
 
 const expenses = [];
 
@@ -27,6 +28,11 @@ addButtonNode.addEventListener("click", function () {
   trackExpanse(expense);
 
   render(expenses);
+});
+
+resetNode.addEventListener("click", function () {
+  console.log("123");
+  resetExpenses(expenses);
 });
 
 function init() {
@@ -91,3 +97,5 @@ function renderStatus(sum) {
     statusNode.classList.add(STATUS_OUT_OF_LIMIT_CLASSNAME);
   }
 }
+
+function resetExpenses() {}

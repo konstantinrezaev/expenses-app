@@ -1,3 +1,86 @@
+body {
+  font-family: "Patrick Hand", cursive;
+  width: 100%;
+  background-color: #c2bfbf;
+}
+
+input,
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+button,
+h1,
+h2,
+p,
+span,
+li,
+.expensesInput {
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+  padding: 100px 50px;
+}
+
+.inputWrapper {
+  display: flex;
+  column-gap: 30px;
+  padding-top: 40px;
+  padding-bottom: 65px;
+}
+
+.expensesInput {
+  position: relative;
+  width: 400px;
+  padding: 8px;
+}
+
+.inputFieldCategory {
+  padding-top: 20px;
+}
+
+.addExpensesBtn,
+.resetExpensesBtn {
+  height: 60px;
+  border: none;
+  color: #fff;
+}
+
+.addExpensesBtn {
+  width: 300px;
+  background-color: #0094ff;
+}
+
+.resetBtnWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.resetExpensesBtn {
+  width: 400px;
+  background-color: #ff0000;
+}
+
+.outputWrapper {
+  display: flex;
+  column-gap: 30px;
+}
+
+.limTotStatWrapper {
+  width: 420px;
+}
+
+.statusText {
+  padding-top: 35px;
+  padding-bottom: 50px;
+}
+
 .status {
   color: green;
 }
