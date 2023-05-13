@@ -21,9 +21,24 @@
         <div class="inputField">
           <div class="inputFieldExpenses">
             <input id="expensesInput" class="expensesInput" type="number" />
+            <span class="inputExpensesText">руб.</span>
           </div>
           <div class="inputFieldCategory">
-            <input id="expensesInput" class="expensesInput" type="number" />
+            <input
+              list="expensesCategory"
+              class="expensesCategory"
+              type="text"
+            />
+            <datalist id="expensesCategory">
+              <option value="">Автомобиль</option>
+              <option value="Комуналка"></option>
+              <option value="Связь"></option>
+              <option value="Продукты"></option>
+              <option value="Одежда"></option>
+              <option value="Кредиты"></option>
+              <option value="Дети"></option>
+              <option value="Непредвиденные расходы"></option>
+            </datalist>
           </div>
         </div>
         <div class="btnField">

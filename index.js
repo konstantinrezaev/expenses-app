@@ -14,7 +14,7 @@ const limitNode = document.getElementById("limit");
 const statusNode = document.getElementById("status");
 const resetNode = document.getElementById("resetExpensesBtn");
 
-const expenses = [];
+let expenses = [];
 
 init(expenses);
 
@@ -26,13 +26,13 @@ addButtonNode.addEventListener("click", function () {
   }
 
   trackExpanse(expense);
-
   render(expenses);
 });
 
-resetNode.addEventListener("click", function () {
-  console.log("123");
-  resetExpenses(expenses);
+resetNode.addEventListener("click", () => {
+  expenses = [];
+  render(expenses);
+  renderStatusRemove();
 });
 
 function init() {
@@ -98,4 +98,7 @@ function renderStatus(sum) {
   }
 }
 
-function resetExpenses() {}
+function renderStatusRemove() {
+  statusNode.classList.remove(STATUS_ON_LIMIT_CLASSNAME);
+  statusNode.classList.remove(STATUS_OUT_OF_LIMIT_CLASSNAME);
+}
